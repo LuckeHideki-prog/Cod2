@@ -1,5 +1,5 @@
-public class GaussSolver {    
-    public static double[] gaussSolver(double[][] A, double[] b) {
+public class EliminacaoGauss {    
+    public static double[] ElimicaoGauss(double[][] A, double[] b) {
         for (int k = 0; k < A.length - 1; k++) {
             double max = Math.abs(A[k][k]);
             int maxIndex = k;            
@@ -47,32 +47,32 @@ public class GaussSolver {
     public static void main(String args[]) {
         double A[][] = {{2, 1, -1}, {1, 2, 1}, {1, 1, 1}};
         double b[] = {-3, 3, 2};
-        double[] x = gaussSolver(A, b);
+        double[] x = ElimicaoGauss(A, b);
         System.out.printf("x1 = %f\nx2 = %f\nx3 = %f\n", x[0], x[1], x[2]);
 
         double A2[][] = {{1, 1, 1}, {-2, 1, 1}, {1, 3, 1}};
         double b2[] = {2, 5, 4};
-        x = gaussSolver(A2, b2);
+        x = ElimicaoGauss(A2, b2);
         System.out.printf("\nx1 = %f\nx2 = %f\nx3 = %f\n", x[0], x[1], x[2]);
         
         double A3[][] = {{3, 2, -1}, {2, -2, 4}, {-1, 0.5, -1}};
         double b3[] = {1, -2, 0};
-        x = gaussSolver(A3, b3);
+        x = ElimicaoGauss(A3, b3);
         System.out.printf("\nx1 = %f\nx2 = %f\nx3 = %f\n", x[0], x[1], x[2]);
         
         double A4[][] = {{2,3}, {4,9}};
         double b4[] = {6,15};
-        x = gaussSolver(A4, b4);
+        x = ElimicaoGauss(A4, b4);
         System.out.printf("\nx1 = %f\nx2 = %f\n", x[0], x[1]);
 
         double A5[][] = {{4, 1, 2, -3}, {-3, 3, -1, 4}, {-1, 2, 5, 1}, {5, 4, 3, -1}};
         double b5[] = {-16, 20, -4, -10};
-        x = gaussSolver(A5, b5);
+        x = ElimicaoGauss(A5, b5);
         System.out.printf("\nx1 = %f\nx2 = %f\nx3 = %f\nx4 = %f\n", x[0], x[1], x[2], x[3]);
 
         double A6[][] = {{4, 1, 2, -3, 5}, {-3, 3, -1, 4, -2}, {-1, 2, 5, 1, 3}, {5, 4, 3, -1, 2}, {1, -2, 3, -4, 5}};
         double b6[] = {-16, 20, -4, -10, 3};
-        x = gaussSolver(A6, b6);
+        x = ElimicaoGauss(A6, b6);
         System.out.printf("\nx1 = %f\nx2 = %f\nx3 = %f\nx4 = %f\nx5 = %f\n", x[0], x[1], x[2], x[3], x[4]);
     }
 }
